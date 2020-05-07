@@ -8,8 +8,10 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.MonthDay;
+import java.time.OffsetDateTime;
 import java.time.Year;
 import java.time.YearMonth;
+import java.time.ZonedDateTime;
 
 /**
  * Java 8新增了java.time包，包含了一些常用类
@@ -144,5 +146,22 @@ public class Java8DateTimeTest {
     // 设置为 5 月 23 日
     MonthDay monthDay2 = monthDay.with(Month.MAY).withDayOfMonth(23);
     System.out.println("5 月 23 日为：" + monthDay2);
+
+    System.out.println("---------------------------------------------------------------------------------");
+
+    /**
+     * ZonedDateTime：带时区的年月日时分秒的另一种表现形式
+     * */
+    OffsetDateTime offsetDateTime = OffsetDateTime.now();
+    System.out.println(offsetDateTime);
+
+    System.out.println("---------------------------------------------------------------------------------");
+
+    /**
+     * ZonedDateTime：带时区的年月日时分秒，包含夏令时调整规则
+     * */
+    ZonedDateTime zonedDateTime = ZonedDateTime.now();
+    System.out.println(zonedDateTime);
+    System.out.println(zonedDateTime.getZone());
   }
 }
