@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 提供一些常用的 Date 相互转换的方法
+ */
 public class DateUtil {
 
   private static final String[] DATE_NAME_OF_WEEK = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
